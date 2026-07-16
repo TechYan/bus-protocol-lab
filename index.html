@@ -93,6 +93,11 @@
       gap: 14px;
     }
 
+    .card.featured {
+      grid-column: 1 / -1;
+      min-height: 280px;
+    }
+
     .card {
       display: grid;
       gap: 12px;
@@ -174,6 +179,23 @@
 
     .pcie .tag strong { color: var(--pcie); }
     .axi .tag strong { color: var(--axi); }
+    .studio .tag strong { color: var(--axi); }
+
+    .studio .preview {
+      grid-template-columns: repeat(16, minmax(0, 1fr));
+    }
+
+    .studio .cell:nth-child(n+3):nth-child(-n+7),
+    .studio .cell:nth-child(n+10):nth-child(-n+15) {
+      background: rgba(71, 199, 161, 0.22);
+      border-color: rgba(71, 199, 161, 0.55);
+    }
+
+    .studio .cell:nth-child(n+19):nth-child(-n+23),
+    .studio .cell:nth-child(n+26):nth-child(-n+31) {
+      background: rgba(107, 169, 255, 0.22);
+      border-color: rgba(107, 169, 255, 0.52);
+    }
 
     @media (max-width: 760px) {
       .app {
@@ -204,6 +226,29 @@
     </header>
 
     <section class="grid" aria-label="Protocol demos">
+      <a class="card featured studio" href="axi-pcie-packet-studio.html">
+        <div>
+          <h2>AXI to PCIe Packet Studio</h2>
+          <p>Select memory ranges, inspect their AXI4 burst decomposition, and follow the same payload into PCIe requests and completions across 4 KB, MPS, MRRS, and RCB boundaries.</p>
+        </div>
+        <div class="preview" aria-hidden="true">
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        </div>
+        <div class="meta">
+          <span class="tag"><strong>AXI4</strong> bursts</span>
+          <span class="tag"><strong>PCIe</strong> TLPs</span>
+          <span class="tag">64-bit memory map</span>
+          <span class="tag">standalone HTML</span>
+        </div>
+      </a>
+
       <a class="card pcie" href="pcie-tlp-split-demo.html">
         <div>
           <h2>PCIe TLP Split Demo</h2>
