@@ -6,7 +6,9 @@ directly in a browser.
 
 ## AXI to PCIe Packet Studio
 
-[Open the latest AXI to PCIe Packet Studio](axi-pcie-packet-studio.html)
+[Open AXI to PCIe Packet Studio online](https://techyan.github.io/bus-protocol-lab/axi-pcie-packet-studio.html)
+
+[Download the standalone HTML](axi-pcie-packet-studio.html)
 
 ![AXI to PCIe Packet Studio overview](assets/axi-pcie-packet-studio-overview.png)
 
@@ -35,10 +37,11 @@ Highlights:
 
 ### Quick start
 
-1. Download [`axi-pcie-packet-studio.html`](axi-pcie-packet-studio.html).
-2. Double-click the file to open it in a modern browser.
-3. Choose a built-in example or select a memory range manually.
-4. Click an AXI burst or TLP region to correlate the same payload across maps.
+1. [Launch the hosted tool](https://techyan.github.io/bus-protocol-lab/axi-pcie-packet-studio.html),
+   or download [`axi-pcie-packet-studio.html`](axi-pcie-packet-studio.html)
+   and double-click it.
+2. Choose a built-in example or select a memory range manually.
+3. Click an AXI burst or TLP region to correlate the same payload across maps.
 
 ## Other demos
 
